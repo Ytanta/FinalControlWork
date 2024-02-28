@@ -1,0 +1,29 @@
+sudo su
+apt update
+mkdir GB
+cd GB/
+mkdir FinalControlWork
+cd FinalControlWork/
+cat > Pets.txt
+Dogs
+Cats
+Hamsters
+cat > PackAnimals.txt
+Horses
+Camels
+Donkeys
+cat Pets.txt PackAnimals.txt > HumanFriends.txt
+cat HumanFriends.txt
+ls
+mkdir HumanFriends
+mv HumanFriends.txt HumanFriends/
+cd HumanFriends/
+ls
+cd ~
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb
+dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+apt update
+apt install mysql-server
+wget https://github.com/atom/atom/releases/download/v1.60.0/atom-amd64.deb
+dpkg -i atom-amd64.deb
+dpkg -r atom
